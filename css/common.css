@@ -1,0 +1,118 @@
+/*浏览器样式重置*/
+*{
+	padding:0;
+	margin:0;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+ul{
+	list-style: none;
+}
+body{
+	font-family: 微软雅黑;
+	overflow-x:hidden; 
+}
+
+/*页头*/
+div.cont{
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+	position: fixed;
+	z-index: 1000;
+}
+header img{
+	float: left;
+	margin-left: 120px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+header .nav{
+	float:right;
+	height: 100px;
+}
+header .nav li{
+	float: left;
+	height: 100%;	
+	text-align: center;
+}
+header .nav li:hover,header .nav li.on{
+	background: #00d1c1;
+}
+header .nav li a{
+	display: inline-block;
+	color: white;
+	font-size: 20px;
+	height: 70px;
+	line-height: 70px;
+	padding: 15px 20px;
+}
+
+
+/*页脚*/
+footer{
+	background: #323232;
+	padding:55px 0;
+}
+footer>div{
+	width: 570px;
+	margin:0 auto;
+}
+#download{
+	height: 280px;
+}
+#download .left-btn{
+	float: left;
+	width: 280px;
+}
+#download .left-btn span{
+	display: block;
+	width: 280px;
+	height: 60px;
+	transition: background 0.5s;
+	border-radius:4px;
+	margin-top:40px; 
+}
+#download .left-btn span.apple{
+	background: url(../image/index/dload_apple1.jpg);
+}
+#download .left-btn span.apple:hover{
+	background: url(../image/index/dload_apple2.jpg);
+}
+#download .left-btn span.android{
+	background: url(../image/index/dload_andriod1.jpg);
+}
+#download .left-btn span.android:hover{
+	background: url(../image/index/dload_andriod2.jpg);
+}
+#download .right-img{
+	float:right;
+}
+#download .right-img p{
+	font-size: 20px;
+	color: #FFF;
+	text-align: center;
+	margin-top: 10px;
+}
+div.copy-right{
+	width: 720px;
+	margin-top: 100px;
+}
+div.copy-right li{
+	font-size: 14px;
+	color: #999;
+	float: left;
+	margin-left: 20px;
+}
+div.copy-right li a{
+	font-size: 14px;
+	color: #999;
+}
+div.copy-right li a:hover{
+	color: #fff;
+}

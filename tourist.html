@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游客</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/tourist.css">
+	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
+</head>
+<body>
+	<!-- 页头 -->
+	<header>
+		<div class="cont">
+			<img src="image/index/logo1.png" alt="Logo">
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li class="on"><a href="#">游客</a></li>
+				<li><a href="#">导游</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">注册</a></li>
+				<li><a href="#">登录</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- 内容展示 -->
+	<hgroup>
+		<!-- 侧边栏 -->
+		<aside>
+			<!-- 导航菜单 -->
+			<ul id="menu">
+				<li class="active" data-menuanchor="page1"><a href="#page1" title="买的放心"></a></li>
+				<li data-menuanchor="page2"><a href="#page2" title="吃的痛快"></a></li>
+				<li data-menuanchor="page3"><a href="#page3" title="买的舒心"></a></li>
+				<li data-menuanchor="page4"><a href="#page4" title="行的安心"></a></li>
+			</ul>
+		</aside>
+		<article id="fullpage">
+			<section class="section"></section>
+			<section class="section"></section>
+			<section class="section"></section>
+			<section class="section"></section>
+		</article>
+	</hgroup>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
+	<script>
+		$('#fullpage').fullpage({
+			// anchors启用浏览器历史记录导航，并且能够作为菜单导航的名称
+			anchors:['page1','page2','page3','page4'],
+			//设置section背景色
+			sectionsColor:['white','#60DDD4','white','#60DDD4'],
+			//设置导航菜单
+			menu:'#menu'
+		});
+	</script>
+</body>
+</html>

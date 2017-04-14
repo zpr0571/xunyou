@@ -1,0 +1,70 @@
+html,body,hgroup{
+	height: 100%;
+}
+hgroup>aside{
+	width: 25%;
+	height: 100%;
+	float: left;
+	background:url(../image/tourist/white.png) no-repeat center center,
+		url(../image/tourist/df-side.png);
+	position: relative;
+}
+hgroup>article{
+	width: 75%;
+	float: right;
+}
+
+/*section背景*/
+#fullpage>section:nth-child(1){
+	background: url(../image/tourist/banner1.png) no-repeat -510px 80px;
+}
+#fullpage>section:nth-child(2){
+	background: url(../image/tourist/banner2.png) no-repeat -560px 80px;
+}
+#fullpage>section:nth-child(3){
+	background: url(../image/tourist/banner3.png) no-repeat -500px 80px;
+}
+#fullpage>section:nth-child(4){
+	background: url(../image/tourist/banner4.png) no-repeat -480px 70px;
+}
+
+/*导航菜单样式*/
+#menu{
+	position: absolute;
+	right: -20px;
+	top:50%;
+	width: 40px;
+	z-index: 1000;
+	margin-top: -140px;
+}
+#menu li{
+	float: left;
+}
+#menu a{
+	display: block;
+	width: 28px;
+	height: 28px;
+	margin:20px 6px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: #a0afb9 no-repeat 50%;
+}
+#menu>li:nth-child(1)>a{
+	background-image: url(../image/tourist/df-01.png);
+}
+#menu>li:nth-child(2)>a{
+	background-image: url(../image/tourist/df-02.png);
+}
+#menu>li:nth-child(3)>a{
+	background-image: url(../image/tourist/df-03.png);
+}
+#menu>li:nth-child(4)>a{
+	background-image: url(../image/tourist/df-04.png);
+}
+#menu a:hover,#menu .active a{
+	background-color: #239ae6;
+	border-radius: 20px;
+	box-shadow: 1px 1px 3px 1px #b4d7ed;
+	border:6px solid #fff;
+	margin:14px 0;
+}

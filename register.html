@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<style>
+		/*全局样式*/
+		*{
+			box-sizing:border-box;
+			margin:0;
+			padding:0;			
+		}
+		h1{
+			font-weight: normal;
+			font-size: 28px;
+		}
+		body{
+			font-family: 微软雅黑;
+			color: white;
+			overflow: hidden;
+		}
+
+		/*表单样式*/
+		.wrapper{
+			background: #50a3a2;
+			background:-webkit-linear-gradient(to bottom right,#50a3a2,#53e3a6);
+			background:linear-gradient(to bottom right,#50a3a2,#53e3a6);
+			opacity: 0.8;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			overflow: hidden;
+		}
+		/*logo*/
+		.h_logo{
+			display: block;
+			width: 152px;
+			height: 112px;
+			background: url(image/login/xunyou.png) no-repeat center bottom;
+			position: absolute;
+			top: 60px;
+			left: 20%;
+			cursor: pointer;
+		}
+		/*表单*/
+		.container{
+			margin:15% auto;
+			height: 100%;
+			text-align: center;
+		}
+		form{
+			padding: 20px 0;
+			position: relative;
+		}
+		form input{
+			outline: 0;
+			border: 1px solid rgba(255,255,255,0.4);
+			background: rgba(255,255,255,0.4);
+			width: 250px;
+			border-radius: 3px;
+			padding: 10px 15px;
+			display: block;
+			margin:0 auto 10px auto;
+			font-size:18px;
+			color: white;
+			transition-duration: 0.25s;
+		}
+		form input:hover{
+			background-color: rgba(255,255,255,0.4);
+		}
+		form input:focus{
+			background-color: white;
+			width: 300px;
+			color: #53e3a6;
+		}
+		/*占位符样式*/
+		body ::-webkit-input-placeholder{
+			color: white;	
+		}
+		body ::-moz-input-placeholder{
+			color: white;	
+		}
+		body ::-moz-placeholder{
+			color: white;	
+		}
+		body ::-ms-placeholder{
+			color: white;	
+		}
+
+		/*错误提示*/
+		.easytip-arrow{
+			left:-20px !important;
+			top:11px !important;
+			border-color: transparent rgba(255,255,255,0.9) transparent transparent !important;
+		}
+		.easytip-text{
+			border:none !important;
+		}
+		#easytop-div-mainuid{
+			left: 63% !important;
+			width: 24% !important;
+		}
+		#easytop-div-mainemail{
+			left: 63% !important;
+			width: 24% !important;
+		}
+		/*链接*/
+		a.direct{
+			color: #501010;
+			text-decoration: none;
+		}
+		a.direct:hover{
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	
+    <div class="wrapper">
+    	<!-- logo -->
+    	<a href="index.html" class="h_logo"></a>
+    	<!-- 表单 -->
+    	<div class="container">
+    		<h1>注册</h1>
+    		<form id="reg-form" class="form">
+    			<input type="text" name="uid" id="uid" easyform="length:4-16;char-normal;real-time;" message='<b>昵称必须为4-16位的英文字母或数字</b>' easytip="disappear:lost-focus;theme:white;" placeholder="请输入昵称">
+    			<input type="text" name="email" id="email" easyform="email;real-time;" message="Email格式要正确" easytip="disappear:lost-focus;theme:white;" placeholder="请输入Email">
+    			<input type="submit" id="login-button" value="注册">
+    			<a href="login.html" class="direct">已有账号，直接登录！</a>
+    		</form>
+    	</div>
+    	<!-- 小方块 -->
+    	<ul>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    	</ul>
+    </div>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/easyform.js"></script>
+	<script>
+		$('#reg-form').easyform();
+	</script>
+</body>
+</html>

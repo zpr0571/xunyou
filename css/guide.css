@@ -1,0 +1,71 @@
+#fullpage>section{
+	position: relative;
+}
+#fullpage>section:first-child{
+	background-image: url(../image/daoyou/d2.png);
+	background-position: -200px 80px;
+}
+#fullpage>section:nth-child(2){
+	background-image: url(../image/daoyou/d3.png);
+	background-position: -350px 80px;
+}
+#fullpage>section:nth-child(3){
+	background-image: url(../image/daoyou/wd4.png);
+	background-position: -350px 80px;
+}
+#fullpage>section:nth-child(4){
+	background-image: url(../image/daoyou/d5.png);
+	background-position: -450px 80px;
+}
+#fullpage>section:last-child{
+	padding-top: 80px;
+}
+#img1{
+	transform:translate(50px,100px);
+	transition: transform 1.5s;
+}
+#img2{
+	position: absolute;
+	right: -15%;
+	bottom: 50px;
+	opacity: 0;
+}
+#img3{
+	position: absolute;
+	bottom: 100px;
+	left:200px;
+	opacity: 0;
+}
+#img4{
+	position: absolute;
+	bottom: 100px;
+	left:200px;
+	opacity: 0;
+}
+#img5{
+	position: absolute;
+	bottom: 120px;
+	left:220px;
+	opacity: 0;
+}
+#img6{
+	position: absolute;
+	bottom: 140px;
+	left:250px;
+	opacity: 0;
+}
+#img7{
+	position: absolute;
+	bottom: 50px;
+	right:400px;	
+}
+#img8{
+	position: absolute;
+	bottom: 50px;
+	right:300px;	
+}
+#img9{
+	position: absolute;
+	bottom: 50px;
+	right:200px;	
+}

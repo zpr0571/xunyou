@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导游</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/guide.css">
+	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
+</head>
+<body>
+	<!-- 页头 -->
+	<header>
+		<div class="cont">
+			<img src="image/index/logo1.png" alt="Logo">
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">游客</a></li>
+				<li class="on"><a href="#">导游</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">注册</a></li>
+				<li><a href="#">登录</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- 正文 -->
+	<article id="fullpage">
+		<section class="section">
+			<img src="image/daoyou/7.png" id="img1">
+		</section>
+		<section class="section">
+			<img src="image/daoyou/banner2.png" id="img2">
+		</section>
+		<section class="section">
+			<img src="image/daoyou/13.png" id="img3">
+			<img src="image/daoyou/14.png" id="img4">
+			<img src="image/daoyou/12.png" id="img5">
+			<img src="image/daoyou/9.png" id="img6">
+		</section>
+		<section class="section">
+			<img src="image/daoyou/17.png" id="img7">
+			<img src="image/daoyou/15.png" id="img8">
+			<img src="image/daoyou/16.png" id="img9">
+		</section>
+		<section class="section">
+			<!-- 页脚 -->
+			<footer>
+				<div id="download">
+					<div class="left-btn">
+						<span class="apple"></span>
+						<span class="android"></span>
+					</div>
+					<div class="right-img">
+						<img src="image/index/er.png" alt="扫描二维码下载">
+						<p>扫描二维码</p>
+					</div>
+				</div>
+				<div class="copy-right">
+					<ul>
+						<li>Copyright &copy;2016-2017</li>
+						<li><a href="#">www.xunyou.com</a></li>
+						<li><a href="#">北京寻游科技股份有限公司</a></li>
+						<li>京ICP备15966914号</li>
+					</ul>
+				</div>
+			</footer>
+		</section>
+	</article>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
+	<script>
+		$('#fullpage').fullpage({
+			// anchors启用浏览器历史记录导航，并且能够作为菜单导航的名称
+			anchors:['page1','page2','page3','page4','page5'],
+			//设置section背景色
+			sectionsColor:['white','#60DDD4','white','#60DDD4','#323232'],
+			//显示导航]
+			navigation:true,
+			afterRender:function(){
+				//dom准备就绪后执行
+				$(this).find('section:nth(3) img').css('opacity',0);
+			},
+			afterLoad:function(anchor,index){
+				//当前内容页加载后执行
+				if(index == 1){
+					$('#img1').css('transform','translate(350px,100px)')
+				}else if(index == 2){
+					$('#img2').animate({
+						right:'15%',
+						opacity:1
+					},1000)
+				}else if(index == 3){
+					$('#img3').animate({'opacity':1},500);
+					$('#img4').delay(500).animate({'opacity':1},500);
+					$('#img5').delay(1000).animate({'opacity':1},500);
+					$('#img6').delay(1500).animate({'opacity':1},500);
+				}else if(index == 4){
+					$('#img7').animate({'opacity':1},500);
+					$('#img8').delay(500).animate({'opacity':1},500);
+					$('#img9').delay(1000).animate({'opacity':1},500)
+				}
+			}
+		});
+	</script>
+</body>
+</html>
